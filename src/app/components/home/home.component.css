@@ -1,0 +1,11 @@
+.text-form {
+  text-align: center;
+  text-shadow: 1px 1px 15px black;
+  font-family: Georgia;
+}
+
+.title {
+  text-align: center;
+  font-family: Georgia;
+  font-size: 64px;
+}
