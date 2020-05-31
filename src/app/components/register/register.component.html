@@ -46,6 +46,14 @@
         </mat-form-field>
 
         <mat-form-field>
+          <input id="userName"
+                 matInput
+                 formControlName="userName"
+                 [(ngModel)]="user.userName"
+                 placeholder="Enter your user name" />
+        </mat-form-field>
+
+        <mat-form-field>
           <input id="password"
                  matInput
                  formControlName="password"

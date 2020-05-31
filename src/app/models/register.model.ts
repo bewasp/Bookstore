@@ -4,5 +4,6 @@ export class RegisterModel {
   firstName: String;
   lastName: String;
   address: String;
+  userName: String;
   phone: String;
 }
