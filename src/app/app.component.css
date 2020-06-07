@@ -1,8 +1,9 @@
 footer {
-  position:relative;
-  bottom:0;
+  position: absolute;
+  bottom:0px;
+  left: 0px;
   width:100%;
-  height:60px;
+  height: auto;
 }
 
 .center {
@@ -14,7 +15,7 @@ footer {
 
 
 .bg {
-  background-image: url("https://i.imgur.com/kSSn9no.jpg");
+  background-image: url("https://buddhify.com/wp-content/uploads/2018/07/iStock-689785084.jpg");
   background-repeat: no-repeat;
   background-color: #ffffff;
   background-position: center;

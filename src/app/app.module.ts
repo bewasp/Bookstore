@@ -11,6 +11,8 @@ import {MaterialModule} from './material.module';
 import {ReactiveFormsModule} from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { ShoppingcartComponent } from './components/shoppingcart/shoppingcart.component';
+import { BooksComponent } from './components/books/books.component';
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -19,14 +21,16 @@ import { ShoppingcartComponent } from './components/shoppingcart/shoppingcart.co
     LoginComponent,
     RegisterComponent,
     NavbarComponent,
-    ShoppingcartComponent
+    ShoppingcartComponent,
+    BooksComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

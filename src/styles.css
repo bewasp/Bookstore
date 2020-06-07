@@ -18,14 +18,15 @@ body {
 }
 
 .list-viewer-wrapper {
-  border: 1px solid rgba(0, 0, 0, .03);
-  box-shadow: 0 2px 2px rgba(0, 0, 0, .24), 0 0 2px rgba(0, 0, 0, .12);
+  border: 1px solid rgba(0, 0, 0, .12);
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.37);
   margin: 4px;
 }
 
+
 .list-header-title {
   color: rgba(0, 0, 0, .54);
-  background: rgba(0, 0, 0, .03);
+  background: rgb(63, 81, 181);
   padding: 8px 20px;
   font-weight: bold;
 }
@@ -37,4 +38,16 @@ body {
 
 .divider {
   margin-top: 10px !important;
+}
+
+.text-form {
+  text-align: center;
+  text-shadow: 1px 1px 15px black;
+  font-family: Georgia;
+}
+
+.title {
+  text-align: center;
+  font-family: Georgia;
+  font-size: 64px;
 }
