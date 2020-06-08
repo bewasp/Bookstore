@@ -13,6 +13,9 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { ShoppingcartComponent } from './components/shoppingcart/shoppingcart.component';
 import { BooksComponent } from './components/books/books.component';
 import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
+import { BookComponent } from './components/book/book.component';
+import {AddBookComponent} from './components/add-book/add-book.component';
+import { BookPageComponent } from './components/book-page/book-page.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,10 @@ import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
     RegisterComponent,
     NavbarComponent,
     ShoppingcartComponent,
-    BooksComponent
+    BooksComponent,
+    BookComponent,
+    AddBookComponent,
+    BookPageComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,14 @@
+<div class="flex-container">
+  <div class="text-form">
+    <div class="card" style="width: 18rem;">
+      <img class="images" src="{{'data:image/png;base64,'+ picture}}">
+      <div class="card-body">
+        <h5 class="card-title">{{title}}</h5>
+        <p class="card-text">{{description}} <br> Type: {{type}} Price: {{price}} Pages:{{number}}</p>
+        <a [routerLink]="['/book-page/'+book_id]" class="btn btn-primary">View more</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+

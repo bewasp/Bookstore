@@ -1,0 +1,61 @@
+<div class="medium-list">
+  <div class="list-viewer-wrapper">
+    <div class="list-header-title">Add books</div>
+
+    <form [formGroup]="bookForm" (ngSubmit)="bookForm.valid && onBookSubmit()" novalidate>
+      <div class="form-container">
+
+        <mat-form-field>
+          <input id="picture"
+                 matInput
+                 formControlName="picture"
+                 [(ngModel)]="book.picture"
+                 placeholder="Enter url to picture of book" />
+        </mat-form-field>
+
+        <mat-form-field>
+          <input id="title"
+                 matInput
+                 formControlName="title"
+                 [(ngModel)]="book.title"
+                 placeholder="Enter title of book" />
+        </mat-form-field>
+
+        <mat-form-field>
+          <input id="description"
+                 matInput
+                 formControlName="description"
+                 [(ngModel)]="book.description"
+                 placeholder="Enter description of book" />
+        </mat-form-field>
+
+        <mat-form-field>
+          <input id="type"
+                 matInput
+                 formControlName="type"
+                 [(ngModel)]="book.type"
+                 placeholder="Enter type of book" />
+        </mat-form-field>
+
+        <mat-form-field>
+          <input id="price"
+                 matInput
+                 formControlName="price"
+                 [(ngModel)]="book.price"
+                 placeholder="Enter price of book" />
+        </mat-form-field>
+
+        <mat-form-field>
+          <input id="number"
+                 matInput
+                 formControlName="number"
+                 [(ngModel)]="book.number"
+                 placeholder="Enter number of pages" />
+        </mat-form-field>
+
+        <button mat-button type="submit"
+                class="mat-raised-button mat-primary" [disabled]="!bookForm.valid">Add</button>
+      </div>
+    </form>
+  </div>
+</div>

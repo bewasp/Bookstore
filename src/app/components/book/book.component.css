@@ -1,0 +1,9 @@
+.flex-container {
+  display: flex;
+  justify-content: center;
+}
+
+.images {
+  width: 200px;
+  height: 200px;
+}
