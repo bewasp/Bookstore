@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {HttpClient} from '@angular/common/http';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {ClientBook} from '../../models/client-book.model';
 import {UserAccessService} from '../auth/user-access.service';
 
@@ -18,5 +18,19 @@ export class CartService {
 
   getCartBooks() {
     return this.http.get(this.url + '/cart-books/' + this.access.currentUser.userId);
+  }
+
+  deleteBook(clientBook: ClientBook) {
+    const options = {
+      headers: new HttpHeaders({
+        'Content-Type':  'application/json'
+      }),
+      body: clientBook
+    };
+    return this.http.delete(this.url + '/delete', options);
+  }
+
+  deleteAllBooks() {
+    return this.http.delete(this.url + '/clear/' + this.access.currentUser.userId);
   }
 }

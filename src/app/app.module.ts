@@ -17,6 +17,7 @@ import { BookComponent } from './components/book/book.component';
 import {AddBookComponent} from './components/add-book/add-book.component';
 import { BookPageComponent } from './components/book-page/book-page.component';
 import {SummaryPipe} from './pipes/summary.pipe';
+import {CartBookComponent} from './components/cart-book/cart-book.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import {SummaryPipe} from './pipes/summary.pipe';
     BookComponent,
     AddBookComponent,
     BookPageComponent,
-    SummaryPipe
+    SummaryPipe,
+    CartBookComponent
   ],
   imports: [
     BrowserModule,

@@ -1,17 +1,10 @@
 .flex-container {
   display: flex;
-  justify-content: center;
-  flex-flow: column;
+  flex-flow: row wrap;
 }
 
-.images {
-  height: 200px;
-  width: 200px;
-}
-
-.textes {
+.center {
+  align-content: center;
+  align-items: center;
   text-align: center;
-  text-shadow: 1px 1px 15px black;
-  font-size: 23px;
-  font-family: Georgia;
 }

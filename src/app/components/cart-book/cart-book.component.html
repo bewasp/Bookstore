@@ -1,0 +1,15 @@
+<div class="flex-container">
+  <div class="card" style="width: 16rem; margin-left: 20px; margin-top: 20px">
+    <img class="card-img-top" src="{{'data:image/png;base64,'+ picture}}">
+    <div class="card-body">
+      <div class="card-title">
+        <h5>{{title}}</h5>
+      </div>
+      <p class="card-text">Price: {{price}}</p>
+      <div class="list its">
+        <a [routerLink]="['/book-page/'+ book_id]" class="btn btn-primary">View more</a>
+        <mat-icon (click)="deleteBook()">remove_shopping_cart</mat-icon>
+      </div>
+    </div>
+  </div>
+</div>
