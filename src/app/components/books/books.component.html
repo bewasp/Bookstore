@@ -1,11 +1,13 @@
-<div *ngFor="let i of books">
-  <app-book [book_id]="i.bookId"
-            [picture]="i.picture"
-            [title]="i.title"
-            [description]="i.description"
-            [type]="i.type"
-            [price]="i.price"
-            [number]="i.number"
-  >
-  </app-book>
+<div class="cont">
+  <div *ngFor="let i of books">
+    <app-book [book_id]="i.bookId"
+              [picture]="i.picture"
+              [title]="i.title"
+              [description]="i.description"
+              [type]="i.type"
+              [price]="i.price"
+              [number]="i.number"
+    >
+    </app-book>
+  </div>
 </div>

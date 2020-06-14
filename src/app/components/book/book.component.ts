@@ -1,5 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {DomSanitizer} from '@angular/platform-browser';
+import {CartService} from '../../services/cart-service/cart.service';
+import {ClientBook} from '../../models/client-book.model';
+import {UserAccessService} from '../../services/auth/user-access.service';
 
 @Component({
   selector: 'app-book',
@@ -16,10 +18,19 @@ export class BookComponent implements OnInit {
   @Input() price: number;
   @Input() number: number;
 
-  constructor(private sanitizer: DomSanitizer) { }
+  clientBook: ClientBook;
+
+  constructor(private service: CartService, private access: UserAccessService) { }
 
   ngOnInit() {
+    this.clientBook = new ClientBook();
+    this.clientBook.userId = this.access.currentUser.userId;
+    this.clientBook.bookId = this.book_id;
+    this.clientBook.booksNumber = 1;
   }
 
-
+  addToCart() {
+    this.service.addToCart(this.clientBook).subscribe();
+    alert('Book added to shopping cart');
+  }
 }

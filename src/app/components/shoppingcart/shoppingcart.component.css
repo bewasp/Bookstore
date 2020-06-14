@@ -1,4 +1,17 @@
 .flex-container {
   display: flex;
   justify-content: center;
+  flex-flow: column;
+}
+
+.images {
+  height: 200px;
+  width: 200px;
+}
+
+.textes {
+  text-align: center;
+  text-shadow: 1px 1px 15px black;
+  font-size: 23px;
+  font-family: Georgia;
 }

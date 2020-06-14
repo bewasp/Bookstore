@@ -16,6 +16,7 @@ import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import { BookComponent } from './components/book/book.component';
 import {AddBookComponent} from './components/add-book/add-book.component';
 import { BookPageComponent } from './components/book-page/book-page.component';
+import {SummaryPipe} from './pipes/summary.pipe';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { BookPageComponent } from './components/book-page/book-page.component';
     BooksComponent,
     BookComponent,
     AddBookComponent,
-    BookPageComponent
+    BookPageComponent,
+    SummaryPipe
   ],
   imports: [
     BrowserModule,
@@ -36,7 +38,7 @@ import { BookPageComponent } from './components/book-page/book-page.component';
     BrowserAnimationsModule,
     MaterialModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

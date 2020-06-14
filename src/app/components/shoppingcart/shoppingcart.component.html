@@ -1,7 +1,10 @@
 <div class="flex-container">
-  <div class="text-form">
-    <mat-list>
-      <mat-list-item> Name: | Price: | Stock:  </mat-list-item>
-    </mat-list>
+  <div *ngFor="let i of books">
+    <div class="textes">
+      <mat-list>
+      <img class="images" src="{{'data:image/png;base64,'+ i.picture}}"> Title: {{i.title}} | Price: {{i.price}}
+        <a [routerLink]="['/book-page/'+i.bookId]" class="btn btn-primary">View more</a>
+      </mat-list>
+    </div>
   </div>
 </div>

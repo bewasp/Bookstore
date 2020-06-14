@@ -3,7 +3,12 @@
   justify-content: center;
 }
 
-.images {
-  width: 200px;
-  height: 200px;
+.cont {
+  overflow-y: auto;
+}
+
+.list {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
 }
