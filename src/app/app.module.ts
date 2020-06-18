@@ -18,6 +18,8 @@ import {AddBookComponent} from './components/add-book/add-book.component';
 import { BookPageComponent } from './components/book-page/book-page.component';
 import {SummaryPipe} from './pipes/summary.pipe';
 import {CartBookComponent} from './components/cart-book/cart-book.component';
+import { UserPageComponent } from './components/user-page/user-page.component';
+import { UserInfoComponent } from './components/user-info/user-info.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import {CartBookComponent} from './components/cart-book/cart-book.component';
     AddBookComponent,
     BookPageComponent,
     SummaryPipe,
-    CartBookComponent
+    CartBookComponent,
+    UserPageComponent,
+    UserInfoComponent
   ],
   imports: [
     BrowserModule,

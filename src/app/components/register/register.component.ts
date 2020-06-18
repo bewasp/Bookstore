@@ -38,10 +38,10 @@ export class RegisterComponent implements OnInit {
       'address': [this.user.address, [
         Validators.required
       ]],
-      'userName': [this.user.username, [
+      'username': [this.user.username, [
         Validators.required
       ]],
-      'phone': [this.user.phoneNumber, [
+      'phoneNumber': [this.user.phoneNumber, [
         Validators.required,
         Validators.pattern('[0-9]{9}')
       ]]

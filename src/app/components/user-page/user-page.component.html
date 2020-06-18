@@ -1,0 +1,10 @@
+<div class="flex-container" *ngIf="user !== undefined">
+    <mat-list class="brd">
+      <mat-list-item class="items"> First name: {{user.firstName}} <span class="spacer"></span> <a class="nav-link" style="color: #00DEFF" [routerLink]="['/user-info/firstName']">Edit</a> </mat-list-item>
+      <mat-list-item class="items"> Last name: {{user.lastName}} <span class="spacer"></span> <a class="nav-link" style="color: #00DEFF" [routerLink]="['/user-info/lastName']">Edit</a> </mat-list-item>
+      <mat-list-item class="items"> Username: {{user.username}} <span class="spacer"></span> <a class="nav-link" style="color: #00DEFF" [routerLink]="['/user-info/username']">Edit</a> </mat-list-item>
+      <mat-list-item class="items"> E-mail: {{user.email}} <span class="spacer"></span> <a class="nav-link" style="color: #00DEFF" [routerLink]="['/user-info/email']">Edit</a> </mat-list-item>
+      <mat-list-item class="items"> Phone number: {{user.phoneNumber}} <span class="spacer"></span> <a class="nav-link" style="color: #00DEFF" [routerLink]="['/user-info/phoneNumber']">Edit</a> </mat-list-item>
+      <mat-list-item class="items"> Address: {{user.address}} <span class="spacer"></span> <a class="nav-link" style="color: #00DEFF" [routerLink]="['/user-info/address']">Edit</a> </mat-list-item>
+    </mat-list>
+</div>

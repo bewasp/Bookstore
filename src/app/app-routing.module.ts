@@ -7,6 +7,8 @@ import {ShoppingcartComponent} from './components/shoppingcart/shoppingcart.comp
 import {BooksComponent} from './components/books/books.component';
 import {AddBookComponent} from './components/add-book/add-book.component';
 import {BookPageComponent} from './components/book-page/book-page.component';
+import {UserPageComponent} from './components/user-page/user-page.component';
+import {UserInfoComponent} from './components/user-info/user-info.component';
 
 const routes: Routes = [{
   path: '',
@@ -29,6 +31,12 @@ const routes: Routes = [{
 }, {
   path: 'book-page/:bookId',
   component: BookPageComponent
+}, {
+  path: 'user-page',
+  component: UserPageComponent
+}, {
+  path: 'user-info/:type',
+  component: UserInfoComponent
 }];
 
 @NgModule({
