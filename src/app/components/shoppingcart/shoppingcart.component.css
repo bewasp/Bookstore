@@ -9,3 +9,11 @@
   align-items: center;
   text-align: center;
 }
+
+.tlt {
+  text-align: center;
+  font-family: Georgia;
+  font-size: 64px;
+  display: flex;
+  justify-content: center;
+}

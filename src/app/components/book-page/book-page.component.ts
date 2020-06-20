@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {BooksModel} from '../../models/books.model';
 import {BookService} from '../../services/book-service/book.service';
 import {ActivatedRoute} from '@angular/router';
+import {Location} from '@angular/common';
 
 @Component({
   selector: 'app-book-page',
@@ -11,7 +12,8 @@ import {ActivatedRoute} from '@angular/router';
 export class BookPageComponent implements OnInit {
   public books: BooksModel;
 
-  constructor(private service: BookService, private route: ActivatedRoute) { }
+  constructor(private service: BookService, private route: ActivatedRoute, private _location: Location) {
+  }
 
   ngOnInit() {
     let bookId: string;
@@ -29,4 +31,7 @@ export class BookPageComponent implements OnInit {
     });
   }
 
+  backPage() {
+    this._location.back();
+  }
 }

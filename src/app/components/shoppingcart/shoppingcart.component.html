@@ -1,4 +1,7 @@
 <div *ngIf="books !== undefined">
+  <div class="tlt">
+    Shopping Cart
+  </div>
   <div class="flex-container">
     <div *ngFor="let i of books">
       <app-cart-book [book_id]="i.bookId"
@@ -12,5 +15,6 @@
 
   <div class="center" *ngIf="books.length !== 0">
     <button class="btn btn-primary" (click)="deleteAllBooks()">Clear shopping cart</button>
+    <button class="btn btn-primary" (click)="completeOrder()">Complete order</button>
   </div>
 </div>

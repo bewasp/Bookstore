@@ -1,4 +1,4 @@
-<div class="flex-container">
+<div class="flex-container" *ngIf="books !== undefined">
   <div class="text-form">
     <img src="{{'data:image/png;base64,'+ books.picture}}">
     <div class="title">
@@ -15,4 +15,8 @@
     </div>
     {{books.description}}
   </div>
+</div>
+<br><br>
+<div class="flex-container">
+  <button mat-button class="btn btn-primary" (click)="backPage()">Back</button>
 </div>

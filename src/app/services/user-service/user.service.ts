@@ -16,7 +16,6 @@ export class UserService {
   }
 
   modifyUser(userInfo: UserInfoModel) {
-    console.log(userInfo);
     return this.http.post(this.url + '/edit/' + this.service.currentUser.userId, userInfo);
   }
 }
