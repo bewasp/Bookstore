@@ -1,14 +1,16 @@
-<div class="flex-container">
-  <div *ngFor="let i of books">
-    <app-cart-book [book_id]="i.bookId"
-              [picture]="i.picture"
-              [title]="i.title"
-              [price]="i.price"
-    >
-    </app-cart-book>
+<div *ngIf="books !== undefined">
+  <div class="flex-container">
+    <div *ngFor="let i of books">
+      <app-cart-book [book_id]="i.bookId"
+                     [picture]="i.picture"
+                     [title]="i.title"
+                     [price]="i.price"
+      >
+      </app-cart-book>
+    </div>
   </div>
-</div>
 
-<div class="center" *ngIf="books.length !== 0">
-  <button class="btn btn-primary" (click)="deleteAllBooks()">Clear shopping cart</button>
+  <div class="center" *ngIf="books.length !== 0">
+    <button class="btn btn-primary" (click)="deleteAllBooks()">Clear shopping cart</button>
+  </div>
 </div>

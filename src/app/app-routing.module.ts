@@ -9,6 +9,7 @@ import {AddBookComponent} from './components/add-book/add-book.component';
 import {BookPageComponent} from './components/book-page/book-page.component';
 import {UserPageComponent} from './components/user-page/user-page.component';
 import {UserInfoComponent} from './components/user-info/user-info.component';
+import {AdminPageComponent} from './components/admin-page/admin-page.component';
 
 const routes: Routes = [{
   path: '',
@@ -37,6 +38,9 @@ const routes: Routes = [{
 }, {
   path: 'user-info/:type',
   component: UserInfoComponent
+}, {
+  path: 'admin-page',
+  component: AdminPageComponent
 }];
 
 @NgModule({

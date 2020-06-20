@@ -20,6 +20,8 @@ import {SummaryPipe} from './pipes/summary.pipe';
 import {CartBookComponent} from './components/cart-book/cart-book.component';
 import { UserPageComponent } from './components/user-page/user-page.component';
 import { UserInfoComponent } from './components/user-info/user-info.component';
+import { AdminPageComponent } from './components/admin-page/admin-page.component';
+import { AdminBookComponent } from './components/admin-book/admin-book.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,9 @@ import { UserInfoComponent } from './components/user-info/user-info.component';
     SummaryPipe,
     CartBookComponent,
     UserPageComponent,
-    UserInfoComponent
+    UserInfoComponent,
+    AdminPageComponent,
+    AdminBookComponent
   ],
   imports: [
     BrowserModule,

@@ -34,8 +34,12 @@ export class LoginComponent implements OnInit {
   onLoginSubmit() {
     this.service.loginMethod(this.user).subscribe(result => {
       this.result = result;
-      if(this.result) {
+      if (this.result) {
         this.router.navigate(['/']);
+      } else {
+        alert('wrong login data');
+        this.loginForm.reset();
+        this.router.navigate(['/login']);
       }
     });
   }

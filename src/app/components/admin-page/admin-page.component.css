@@ -1,0 +1,8 @@
+.flex-container {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.cont {
+  overflow-y: auto;
+}

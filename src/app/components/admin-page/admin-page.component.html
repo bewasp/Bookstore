@@ -1,0 +1,10 @@
+<div class="cont">
+  <div *ngFor="let i of books">
+    <app-admin-book [book_id]="i.bookId"
+              [title]="i.title"
+              [type]="i.type"
+              [price]="i.price"
+    >
+    </app-admin-book>
+  </div>
+</div>

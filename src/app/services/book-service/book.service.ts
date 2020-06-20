@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from '@angular/common/http';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {BookModel} from '../../models/book.model';
+import {UserAccessService} from '../auth/user-access.service';
+import {BooksModel} from '../../models/books.model';
 
 @Injectable({
   providedIn: 'root'
@@ -20,5 +22,15 @@ export class BookService {
 
   getBook(bookId) {
     return this.http.get(this.url + '/' + bookId);
+  }
+
+  deleteBook(book: BooksModel) {
+    const options = {
+      headers: new HttpHeaders({
+        'Content-Type':  'application/json'
+      }),
+      body: book
+    };
+    return this.http.delete(this.url + '/' + book.bookId + '/delete', options);
   }
 }
