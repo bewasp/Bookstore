@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {ActivatedRoute} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 import {UserService} from '../../services/user-service/user.service';
 import {UserInfoModel} from '../../models/user-info.model';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
@@ -15,7 +15,7 @@ export class UserInfoComponent implements OnInit {
   userInf: UserInfoModel;
   editForm: FormGroup;
 
-  constructor(private formBuilder: FormBuilder, private route: ActivatedRoute, private service: UserService) {
+  constructor(private formBuilder: FormBuilder, private route: ActivatedRoute, private service: UserService, private router: Router) {
   }
 
   ngOnInit() {
@@ -38,6 +38,9 @@ export class UserInfoComponent implements OnInit {
     this.service.modifyUser(this.userInf).subscribe((response: boolean) => {
         if (response) {
           alert('success');
+          this.router.routeReuseStrategy.shouldReuseRoute = () => false;
+          this.router.onSameUrlNavigation = 'reload';
+          this.router.navigate(['/user-page']);
         } else {
           alert('error');
         }
